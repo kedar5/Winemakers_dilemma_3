@@ -116,10 +116,10 @@ def calc_payout(p_s, model_s, cost_h, cost_nh_s, cost_nh_ns):
 st.title("Winemakers Dilemma")
 st.subheader("Kedar Deshpande")
 st.text("Chance of storm = 0.5")
-st.text_input("Enter Chance of Botrytis :", key="botrytis",value="0.3")
-st.text_input("Enter Chance of no Sugar increase :", key="sugar1",value="0.2")
-st.text_input("Enter Chance of Typical Suagr increase :", key="sugar2",value="0.5")
-st.text_input("Enter Chance of High Sugar increase :", key="sugar3",value="0.3")
+st.text_input("Enter Chance of Botrytis :", key="botrytis",value="0.1")
+st.text_input("Enter Chance of no Sugar increase :", key="sugar1",value="0.6")
+st.text_input("Enter Chance of Typical Suagr increase :", key="sugar2",value="0.3")
+st.text_input("Enter Chance of High Sugar increase :", key="sugar3",value="0.1")
 
 # You can access the value at any point with:
 mold = st.session_state.botrytis
