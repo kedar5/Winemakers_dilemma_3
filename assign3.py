@@ -113,11 +113,13 @@ def calc_payout(p_s, model_s, cost_h, cost_nh_s, cost_nh_ns):
     e_val = p_dns*(cost_nh_ns*p_ns_dns + cost_nh_s*(1-p_ns_dns)) + cost_h*(1-p_dns)
     return e_val
 
-
-st.text_input("Enter Chance of Botrytis :", key="botrytis")
-st.text_input("Enter Chance of no Sugar increase :", key="sugar1")
-st.text_input("Enter Chance of Typical Suagr increase :", key="sugar2")
-st.text_input("Enter Chance of High Sugar increase :", key="sugar3")
+st.title("Winemakers Dilemma")
+st.subheader("Kedar Deshpande")
+st.text("Chance of storm = 0.5")
+st.text_input("Enter Chance of Botrytis :", key="botrytis",value="0.3")
+st.text_input("Enter Chance of no Sugar increase :", key="sugar1",value="0.2")
+st.text_input("Enter Chance of Typical Suagr increase :", key="sugar2",value="0.5")
+st.text_input("Enter Chance of High Sugar increase :", key="sugar3",value="0.3")
 
 # You can access the value at any point with:
 mold = st.session_state.botrytis
@@ -158,13 +160,13 @@ for s in range(len(specificity)):
         print("Inflection point : ", specificity[s])
 
 if e_val > cost_h:
-    recc =" It is Reccomended to purchase Clairvoyance"
+    recc ="Purchase Clairvoyance"
 else:
-    recc =" Harvest now without Clairvoyance"
+    recc ="Harvest now without Clairvoyance"
         
 if st.button('Compute E Value'):
-    st.write("E Value is :"+ str(round(e_val,2)))
-    st.write("Reccomendation:" + recc)
+    st.write("E Value is : $"+ str(round(e_val,2))+"K")
+    st.write("Reccomendation : " + recc)
 
 
 
