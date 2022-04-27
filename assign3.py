@@ -165,7 +165,7 @@ else:
     recc ="Harvest now without Clairvoyance"
         
 if st.button('Compute E Value'):
-    st.write("E Value is : $"+ str(round(e_val,2))+"K")
+    st.write("E Value is : $"+ str(round(e_val/1000,2))+"K")
     st.write("Reccomendation : " + recc)
 
 
