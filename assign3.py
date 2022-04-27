@@ -44,7 +44,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 
     
-df = pd.read_csv('C:/Users/Kedar/Desktop/MLP/Assign2/winemaker_dilemma/data/vineyard_weather_1948-2017.csv')
+df = pd.read_csv('vineyard_weather_1948-2017.csv')
 print (df.shape)
 df['DATE'].dtype
 df['DATE'] = pd.to_datetime(df['DATE'])
